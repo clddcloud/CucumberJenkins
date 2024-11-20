@@ -1,0 +1,121 @@
+class 1 live
+
+create maven project
+give name to group id and artifact id
+
+cucumber starts from -
+
+1) we write test case / scenario
+2) generate step definitions
+
+rules to remember:
+-every step definition should be unique
+-after generating step def, we cannot add anything in feature file
+-we can reuse all the steps in feature file but we cannot add step def in every class
+
+background
+till the time flow is the same on all the common it can be implemented just once
+
+hooks -
+rule it has just 2 tags @before @after
+it will be available always under steps package
+
+data driven testing - when one test case executes against multiple sets of data
+hooks, background and scenario will be executed based on total sets of data
+we implement scenario outline with example
+
+Framework -
+main - developers
+test - QA automation engineers - to write code through which we test application
+
+java - to write all java classes
+resources - to write all non java stuff (feature files, excel, config files etc)
+
+to keep all the feature files at one place - create separate directory
+
+inside java folder: separate Steps classes for each feature (extends base)
+
+utility package - common methods class - all the methods and webdriver to be used
+config reader class to read all the properties from config prop file
+
+class 2
+recap
+cucumber as a tool
+feature file - user story - test cases - every scenario is considered as on test case
+step definitions - here we write the code for executing the test cases
+runner class - cucumber options
+feature - the path of feature directory/file
+glue - the path of the step definition package
+dry run - to generate missing step definitions, we set the value of it to true
+tags - for batch execution we use tags
+plugin - pretty keyword - to print all the step definitions in the console
+
+background - when all the scenarios of the  feature file having common steps, till the different one
+we can keep all these common steps is background
+once the flow is broken, we cannot keep steps in background
+
+hooks:
+@Before - pre-condition
+@After - post-condition
+
+parameterization
+use parameters to pass (not hardcoded)
+
+maven - build management tool
+src - main, test
+test - java & resources (for java and not java stuff)
+
+framework should be scalable
+framework should be easily managed
+framework should be able to reuse the code
+nothing should be passed hardcoded
+
+page object model design pattern -
+
+we create page classes in this as per the screen in the application
+
+maven surefire plugin -
+it makes our project into single build
+
+scenario class in cucumber -
+it holds the complete information about which test case has passed/failed
+
+class 3 live-
+implement framework -
+cucumber/BDD framework
+it supports Data driven testing
+hybrid framework -
+
+framework is all about standard skeleton and folder structure
+
+framework supports cross browser testing
+framework supports cross platform testing
+
+POM design pattern -
+as per POM, we should create separate page class for every screen of the page
+
+all the reports in execution can be found under target folder
+
+validation of script -
+
+Assertion -
+if your script validation is failed, it will stop the execution
+it will give you the error message
+
+there are 2 types of assertion we use,
+check the presence of element/field/data - boolean
+check if the data is correct or not (expected, actual)
+
+pom.xml file - backbone of the project
+when we execute the code
+- the the code
+  install
+  compile
+  verify
+  test
+
+
+
+
+
+
